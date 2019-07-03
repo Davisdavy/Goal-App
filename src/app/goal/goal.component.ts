@@ -16,8 +16,14 @@ export class GoalComponent implements OnInit {
     new Goal(6, 'Plot my world domination plan', 'Cause I am an evil overlord', new Date(2019, 3, 14)),
   ];
 
-  toggleDetails(i) {
-    this.goals[i].showDescription = !this.goals[i].showDescription;
+  toggleDetails(index) {
+    this.goals[index].showDescription = !this.goals[index].showDescription;
+  }
+
+  completeGoal(isComplete, index) {
+    if (isComplete) {
+      this.goals.splice(index, 1);
+    }
   }
   constructor() { }
 
