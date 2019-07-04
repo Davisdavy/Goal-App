@@ -10,10 +10,9 @@ export class GoalDetailsComponent implements OnInit {
   @Input() goal: Goal;
   @Output() isComplete = new EventEmitter<boolean>();
 
-  goalComplete(complete: boolean) {
+  goalDelete(complete: boolean) {
     this.isComplete.emit(complete);
   }
-
   ngOnInit() {
   }
 
